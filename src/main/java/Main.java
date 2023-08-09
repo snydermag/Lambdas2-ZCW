@@ -24,5 +24,20 @@ public class Main {
 
         // Then
         Person.printPersons(listOfPeople, tester);
+
+        System.out.println();
+
+        CheckPerson anonymous = new CheckPerson(){
+            public boolean test(Person p) {
+                return (p.getAge() > 10);
+            }
+
+        };
+
+        Person.printPersons(listOfPeople, anonymous);
+
+        System.out.println();
+
+        Person.printPersons(listOfPeople, (Person p) -> p.getAge() > 10);
     }
 }
