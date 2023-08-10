@@ -19,25 +19,23 @@ public class Main {
         listOfPeople.add(new Person("Angela Kim", LocalDate.of(2023, Month.FEBRUARY, 14),
                 Person.Sex.FEMALE, "love@love.com"));
 
-        // When
+        // LOCAL CLASS
         CheckPersonConcrete tester = new CheckPersonConcrete();
-
-        // Then
         Person.printPersons(listOfPeople, tester);
-
         System.out.println();
 
+        // ANONYMOUS CLASS
         CheckPerson anonymous = new CheckPerson(){
             public boolean test(Person p) {
                 return (p.getAge() > 10);
             }
 
         };
-
         Person.printPersons(listOfPeople, anonymous);
-
         System.out.println();
 
-        Person.printPersons(listOfPeople, (Person p) -> p.getAge() > 10);
+        // LAMBDA
+        CheckPerson lamb = (Person p) -> p.getAge() > 10;
+        Person.printPersons(listOfPeople, lamb);
     }
 }
