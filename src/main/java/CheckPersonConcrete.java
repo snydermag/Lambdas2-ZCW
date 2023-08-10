@@ -1,4 +1,4 @@
-package src.src.main.java;
+
 
 public class CheckPersonConcrete implements CheckPerson {
 

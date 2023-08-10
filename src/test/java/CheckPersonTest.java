@@ -1,8 +1,7 @@
-package src.src.test.java;
+
 
 import org.junit.Test;
-import src.src.main.java.CheckPersonConcrete;
-import src.src.main.java.Person;
+
 
 import java.time.LocalDate;
 import java.time.Month;
